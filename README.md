@@ -32,7 +32,7 @@ Place this in the **Before `</body>`** section of Webflow (Page or Site Settings
 | Sidebar container | `data-sidebar` | Optional. Used to anchor scroll position midpoint. |
 | Each section | `data-index-section` | Required. Add to every scrollable section. |
 | Section heading | `data-target="Section"` | Required. Must match text inside nav link. |
-| Navigation link | `data-index-link` | Required. One per link that scrolls to a section. |
+| Navigation link | `data-index-link` | Required. One per link that scrolls to a section. Must have `is-active` combo class set up in Webflow. |
 
 ## 🧱 Example HTML Structure
 
@@ -40,7 +40,7 @@ Place this in the **Before `</body>`** section of Webflow (Page or Site Settings
 <div data-index-component data-offset="80">
   
   <div data-sidebar>
-    <a data-index-link>Overview</a>
+    <a data-index-link class="is-active">Overview</a> <!-- Set up is-active combo class in Webflow -->
     <a data-index-link>Features</a>
     <a data-index-link>Pricing</a>
   </div>
@@ -69,7 +69,7 @@ The value in `data-target="..."` must match the text inside the nav link (case-i
 
 **Example:**
 ```html
-<a data-index-link>Pricing</a>
+<a data-index-link class="is-active">Pricing</a> <!-- Set up is-active combo class in Webflow -->
 <h2 data-target="Pricing">...</h2>
 ```
 
